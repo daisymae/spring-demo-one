@@ -1,5 +1,10 @@
 package com.cherylorcutt.springdemo;
 
+/**
+ * basic Java application
+ * @author corcutt
+ *
+ */
 public class MyApp {
 
 	public static void main(String[] args) {
