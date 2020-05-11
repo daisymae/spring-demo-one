@@ -18,6 +18,14 @@
   		class="com.cherylorcutt.springdemo.TrackCoach">
   		<!--  setup constructor injection -->
   		<constructor-arg ref="fortuneService"/>
+  </bean>
+  
+  <bean id="myCricketCoach"
+        class="com.cherylorcutt.springdemo.CricketCoach">
+        <!--  sest up setter injection  -->
+        <!--  NOTE: name here MUST match setter name minus the 'set'; 
+        Spring will capitalize the first letter of the name here to match. -->
+        <property name="fortuneService" ref="fortuneService" />
   </bean>  
 </beans>
 
