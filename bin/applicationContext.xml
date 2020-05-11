@@ -26,6 +26,10 @@
         <!--  NOTE: name here MUST match setter name minus the 'set'; 
         Spring will capitalize the first letter of the name here to match. -->
         <property name="fortuneService" ref="fortuneService" />
+        
+        <!--  inject literal values -->
+        <property name="emailAddress" value="coach@cherylorcutt.com"/>
+        <property name="team" value="Sunrisers Hyderbad" />
   </bean>  
 </beans>
 
