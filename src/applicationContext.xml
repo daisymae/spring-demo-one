@@ -7,6 +7,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+<!-- load properties in the application context -->
+  <context:property-placeholder location="classpath:sport.properties"/>
     <!-- Define your beans here -->
   
   <!--  define the dependency -->
@@ -28,8 +30,11 @@
         <property name="fortuneService" ref="fortuneService" />
         
         <!--  inject literal values -->
-        <property name="emailAddress" value="coach@cherylorcutt.com"/>
-        <property name="team" value="Sunrisers Hyderbad" />
+        <!--  <property name="emailAddress" value="coach@cherylorcutt.com"/>
+        <property name="team" value="Sunrisers Hyderbad" /> -->
+        <!--  inject from property file  -->
+        <property name="emailAddress" value="${foo.email}"/>
+        <property name="team" value="${foo.team}" />
   </bean>  
 </beans>
 
