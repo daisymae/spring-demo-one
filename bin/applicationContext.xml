@@ -15,11 +15,22 @@
   <bean id="fortuneService"
         class="com.cherylorcutt.springdemo.HappyFortuneService">
   </bean>
+ 
+ <!--  random fortune service  -->
+   <bean id="randomFortune"
+        class="com.cherylorcutt.springdemo.RandomFortuneService">
+  </bean>
   
+<!--   <bean id="myCoach" -->
+<!--   		class="com.cherylorcutt.springdemo.TrackCoach"> -->
+<!--   		 setup constructor injection -->
+<!--   		<constructor-arg ref="fortuneService"/> -->
+<!--   </bean> -->
+
   <bean id="myCoach"
   		class="com.cherylorcutt.springdemo.TrackCoach">
-  		<!--  setup constructor injection -->
-  		<constructor-arg ref="fortuneService"/>
+<!--   		 setup constructor injection -->
+  		<constructor-arg ref="randomFortune"/>
   </bean>
   
   <bean id="myCricketCoach"
