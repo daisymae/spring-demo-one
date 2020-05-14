@@ -25,3 +25,4 @@ hs_err_pid*
 # bin files that are not class files
 bin/*.xml
 
+bin/beanScope-applicationContext.xml
