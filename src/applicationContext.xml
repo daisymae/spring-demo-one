@@ -49,6 +49,25 @@
         <!--  inject from property file  -->
         <property name="emailAddress" value="${foo.email}"/>
         <property name="team" value="${foo.team}" />
+  </bean> 
+  
+    <bean id="protoCricketCoach"
+        class="com.cherylorcutt.springdemo.CricketCoach"
+        scope="prototype">
+        <!--  sest up setter injection  -->
+        <!--  NOTE: name here MUST match setter name minus the 'set'; 
+        Spring will capitalize the first letter of the name here to match. -->
+<!--         <property name="fortuneService" ref="fortuneService" /> -->
+        
+        <!--  try the random service with cricketCoach -->
+        <property name="fortuneService" ref="randomFortune"/>
+        
+        <!--  inject literal values -->
+        <!--  <property name="emailAddress" value="coach@cherylorcutt.com"/>
+        <property name="team" value="Sunrisers Hyderbad" /> -->
+        <!--  inject from property file  -->
+        <property name="emailAddress" value="${proto.email}"/>
+        <property name="team" value="${proto.team}" />
   </bean>  
 </beans>
 
