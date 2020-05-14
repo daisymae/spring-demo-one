@@ -38,7 +38,10 @@
         <!--  sest up setter injection  -->
         <!--  NOTE: name here MUST match setter name minus the 'set'; 
         Spring will capitalize the first letter of the name here to match. -->
-        <property name="fortuneService" ref="fortuneService" />
+<!--         <property name="fortuneService" ref="fortuneService" /> -->
+        
+        <!--  try the random service with cricketCoach -->
+        <property name="fortuneService" ref="randomFortune"/>
         
         <!--  inject literal values -->
         <!--  <property name="emailAddress" value="coach@cherylorcutt.com"/>
